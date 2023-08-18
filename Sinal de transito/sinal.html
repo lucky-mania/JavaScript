@@ -1,0 +1,42 @@
+<html>
+<head>
+    <style>
+        div#area {
+           font: normal 20px arial;
+            background-color: blue;
+            color: black;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id = 'area'>
+    interaja..
+    </div>
+   <section>
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click' , clicar)
+        a.addEventListener( 'mouseenter' , entrar)
+        a.addEventListener('mouseout' , sair)
+
+        function clicar() {
+       a.innerText = 'clicou'
+       a.style.background = 'red'
+        }
+        function entrar(){
+        a.innerText = "entrou"
+        a.style.background = 'green'
+        }
+        function sair(){
+            a.innerText = "saiu"
+            a.style.background = "yellow"
+        }
+    </script>
+    </section>
+</body>
+</html>
