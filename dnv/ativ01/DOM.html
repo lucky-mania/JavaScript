@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Apredendo a usar o <strong>DOM</strong> em JS</p>
+    <div id="msg1">Clique em mim...</div>
+    <div name="msg2">Clique em mim...</div>
+    <div class="msg3">clique em mim</div>
+    <div class="msg4">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]//copia o paragrafo 0
+        var dadoId = window.document.getElementById('msg1');//ID | .
+        var dadoName = window.document.getElementsByName('msg2')[0];//NAME | #
+        var dadoClass = window.document.getElementsByClassName('msg3')[0]
+        var DadoId = window.document.querySelector('div.msg4');// usando querselector
+
+        window.document.write('Est escrito assim:' + p1.innerText);//copia a linha 0
+        corpo.style.background='gray';//muda cor de fundo
+        p1.style.color='white'; // muda a cor do primeiro "p"
+        
+        //variaveis
+        dadoId.style.background='green';// muda a cor da variavel Dado
+        dadoName.style.background='red';
+        dadoClass.style.background='yellow';
+        DadoId.style.background='blue';
+    </script>
+</body>
+</html>
