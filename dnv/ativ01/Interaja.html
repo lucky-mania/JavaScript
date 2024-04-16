@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #area{
+        font: normal 20pt arial;
+        background-color: rgb(32, 214, 32);
+        color: white;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;/*alinha a palavra no meio da caixa*/
+        text-align: center;
+        margin: auto;
+      }
+
+    </style>
+</head>
+<body>
+    <div id="area">Interaja...</div>
+
+    <script>
+        var dado = window.document.querySelector("div#area")
+        dado.addEventListener("click", clicar)// ela fica prestando atençao em determinado evento
+        dado.addEventListener("mouseenter", entra)//entra
+        dado.addEventListener("mouseout", sair)//sair
+
+        dado.style.color="black";
+
+       function clicar(){
+            dado.innerText="clicou"
+            dado.style.background="blue"
+    }
+    function entra(){
+            dado.innerText="entrou"
+            dado.style.background="red"
+    }
+    function sair(){
+            dado.innerText="saiu"
+            dado.style.background="yellow"
+    }
+    </script>
+</body>
+</html>
