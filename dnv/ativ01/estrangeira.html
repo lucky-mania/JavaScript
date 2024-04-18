@@ -7,9 +7,12 @@
 </head>
 <body>
     <h1>Nacionalidade</h1>
+
     <input type="text" id="txt1">
     <input type="button" value="Saber" onclick="clicar()">
+
      <div id="res"> <br>
+        
     <script>
         function clicar(){
             var txt = window.document.querySelector("#txt1")
@@ -17,7 +20,7 @@
             var vel = String(txt.value)
             res.innerText = `Seu pais é ${vel}` 
             if(vel == 'brasil'){
-                res.innerText += `vc e br`
+                res.innerText += `, vc e br`
             }else{
                 res.innerText += `vc e viad0`
             }       
