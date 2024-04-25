@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Voto</h1>
+    <label for="txt">Sua Idade:</label>
+    <input type="text" id="txt" placeholder="Idade Para Votar">
+    <input type="button" onclick="button()" value="Voto">
+    <div id="res">
+
+        <script>
+            function button(){
+                var txt = window.document.querySelector("#txt")
+                var res = window.document.querySelector("#res")
+                var vel = String(txt.value)
+                res.innerHTML+=`<hr> Vc tem ${vel} anos. </br>`
+                if(vel >= 16 && vel <= 18){
+                    res.innerHTML+='Voto opcional </br> <hr>'
+                }else if(vel >= 18 && vel <= 100){
+                    res.innerHTML+='Voto obrigatorio </br> <hr>'
+                }else if(vel <= 16){
+                    res.innerHTML+='N pode votar </br> <hr>'
+                }else{
+                    res.innerHTML+='continue morto </br> <hr>'
+                }
+                
+            }
+        </script>
+</body>
+</html>

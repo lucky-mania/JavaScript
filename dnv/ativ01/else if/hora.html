@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hora atual</h1>
+    <div id="res">
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var min = agora.getMinutes()
+        var sec= agora.getSeconds()
+        var res= window.document.querySelector("#res")
+        res.innerHTML+=(`Agora sao exatamente ${hora}H:${min}M:${sec}S<`)
+        if(hora >= 0 && hora <=12){
+            res.innerHTML+=`Bom Dia`
+        } else if(hora >= 12 && hora <=18){
+            res.innerHTML+=`Bom Tarde`
+        } else if(hora >= 18 && hora <=24){
+            res.innerHTML+=`Bom Noite`
+        }
+    </script>
+</body>
+</html>

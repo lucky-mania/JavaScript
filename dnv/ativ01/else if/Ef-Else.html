@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #txt{
+        width: 100px;
+       }
+       #txt:hover{
+       background-color: rgb(255, 255, 255);
+       }
+
+    </style>
+</head>
+<body>
+    <H1>Nacionalidade</H1>
+    <input type="text" id="txt" placeholder="Seus pais...">
+    <input type="button"  onclick="somar()" value="calcular" >
+    <div id="res">
+    <script>
+      function somar(){
+          var txt= window.document.querySelector("#txt")
+          var resv= window.document.querySelector("#res")
+          var vel = String(txt.value)
+         if(vel == 'brasil'){
+            resv.innerHTML = 'vc ta certo...'
+            resv.style.background='blue'
+         }else{
+            resv.innerHTML='vc esta errado...'
+            resv.style.background='red'
+         }
+      }
+    </script>
+</body>
+</html>

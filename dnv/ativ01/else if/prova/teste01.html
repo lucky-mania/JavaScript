@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: chocolate;
+        }
+        #quadrado{
+        margin: auto;
+        background-color: beige;
+        width: 500px;
+        height: 300px;
+        border-radius: 20px;
+        }
+        h1{
+            text-align: center;
+        }
+        #res{
+            text-align: center;
+            justify-content: center;
+            line-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="h1">
+        <h1>Hora do dia</h1>
+    </div>
+    <div id="quadrado">
+        <div id="res">
+    </div>
+    <script>
+        var res = window.document.querySelector("#res")
+        var h1 = window.document.querySelector("#h1")
+        var corpo = window.document.body
+        var atual = new Date()
+        var hora = atual.getHours()
+        var min = atual.getMinutes()
+        var sec = atual.getSeconds()
+        if( hora >= 0 && hora <= 12){
+          res.innerHTML=`Bom dia, hora atual: ${hora}H:${min}M:${sec}S`
+          corpo.style.background='aqua'  
+        }
+        else if( hora >= 12 && hora <= 18){
+          res.innerHTML=`Bom tarde, hora atual: ${hora}H:${min}M:${sec}S`
+          corpo.style.background='chocolate'  
+        }
+        else if( hora >= 18 && hora <= 24){
+          res.innerHTML=`Bom Noite, hora atual: ${hora}H:${min}M:${sec}S`
+          corpo.style.background='black'
+          h1.style.color='white' 
+        }
+    </script>
+</body>
+</html>
