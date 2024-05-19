@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo onchange</title>
+    <script type="text/javascript">
+        function mostrarSelecao(event) {
+            alert("Você selecionou: " + event.target.value);
+        }
+    </script>
+</head>
+<body>
+    <label for="meuSelect">Escolha uma opção:</label>
+    <select id="meuSelect" onchange="mostrarSelecao(event)">
+        <option value="opcao1">Opção 1</option>
+        <option value="opcao2">Opção 2</option>
+        <option value="opcao3">Opção 3</option>
+    </select>
+</body>
+</html>

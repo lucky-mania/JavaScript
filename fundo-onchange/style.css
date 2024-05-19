@@ -27,6 +27,7 @@ body{
     border-radius: 10px;
 }
 select{
+    font-size: 20px;
     color: aliceblue;
     background-color: black;
 }

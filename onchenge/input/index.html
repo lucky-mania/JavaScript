@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo onchange</title>
+    <script type="text/javascript">
+        function mostrarValor(event) {
+            alert("Você digitou: " + event.target.value);
+        }
+    </script>
+</head>
+<body>
+    <label for="meuTexto">Digite algo:</label>
+    <input type="text" id="meuTexto" onchange="mostrarValor(event)">
+</body>
+</html>

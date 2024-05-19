@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo onchange</title>
+    <script type="text/javascript">
+        function mostrarTexto(event) {
+            console.log("Texto alterado: " + event.target.value);
+        }
+    </script>
+</head>
+<body> 
+    <label for="meuTextarea">Digite um texto:</label>
+    <textarea id="meuTextarea" onchange="mostrarTexto(event)"></textarea>
+</body>
+</html>
